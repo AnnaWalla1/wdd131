@@ -22,10 +22,12 @@ h2{
 }
 .paragraphs{
     text-align: left;
+    padding: 10px;
 }
 body{
  display: flex;
  justify-content: center;
+ padding: 50px;
 }
 footer{
     display: grid;
