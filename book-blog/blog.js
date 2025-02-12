@@ -26,3 +26,32 @@ const articles = [
 		stars: '⭐⭐⭐⭐'
 	}
 ]
+
+console.log(articles[1].title);
+
+const container=document.querySelector('#blog-articles');
+articles.forEach(function(item){
+	let book = document.createElement('article');
+
+	book.setAttribute('class', 'book');
+
+
+	let html =
+	`
+	<div class="card1">
+	<emp><p>${ClipboardItem.date}</p></emp>
+	<p>${item.ages}</p>
+	<p>${item.genre}</p>
+	<p>${item.stars}</p>
+	</div>
+
+	<divclass="card1">
+	<h2>${item.title}</h2>
+	<img src="${item.imgSrc}" alt="F${item.imgAlt}">
+	<p>${item.description}</p>
+	</div>
+	`
+	book.innerHTML = html;
+	container.appendChild(book);
+
+})
