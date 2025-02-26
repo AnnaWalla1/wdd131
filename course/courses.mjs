@@ -4,7 +4,7 @@ export const aCourse = {
     name: "Javascript Language",
     sections:[
         {sectionNum: 1, roomNum: 'STC 353', enrolled: 26, days: 'TTH', instructor: 'Bro. T'},
-        {sectionNum: 1, roomNum: 'STC 386', enrolled: 15, days: 'TTH', instructor: 'Sister Anderson'}
+        {sectionNum: 2, roomNum: 'STC 386', enrolled: 15, days: 'TTH', instructor: 'Sister Anderson'}
     ],
     enrollStudent: function (sectionNum) {
         // find the right section...Array.findIndex will work here
