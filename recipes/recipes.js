@@ -332,14 +332,14 @@ function ratingTemplate(rating){
 }
 
 function renderRecipe(recipeList){
-	let recipeContainer = document.querySelector('.recipe');
+	let recipeContainer = document.querySelector('.recipe-card');
 	let html = recipeTemplate(recipeList);
 	recipeContainer.innerHTML += html;
 }
 
 function init(){
 	const recipe = getRandomRecipe(recipes);
-	let recipeContainer = document.querySelector('.recipe')
+	let recipeContainer = document.querySelector('.recipe-card');
 	recipeContainer.innerHTML ='';
 	renderRecipe(recipe);
 }
