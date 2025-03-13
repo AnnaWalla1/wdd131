@@ -4,28 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A responsive place to find recipes">
+    <meta property="og:title" content="Page Title">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Page Description">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="author" content="Anna Erickson">
     <title>Recipe Book</title>
     <link rel="stylesheet" href="recipes.css" />
     <script type="module" src="recipes.js" defer></script>
 </head>
+
 <body>
-    <img src="images/recipe-book.png" alt="recipe book image">
-    <h1>Recipe Book</h1>
-<!-- search bar  -->
- <div  id="box">
-    <img src="images/apple-crisp.jpg" alt="Apple Crisp">
-<button>Desserts</button>
-<h2 class="rating">Apple Crisp</h2>
- </div>
+    <header>
+        <img id="book" src="images/recipe-book.png" alt="recipe book image">
+        <h1>Recipe Book</h1>
+        <input type="text" placeholder="Find a recipe" class="search-bar">
+    </header>
+
+    <main>
+        <div id="recipe-card">
+            <img src="images/apple-crisp.jpg" alt="Apple Crisp">
+            <button class="category"> Desserts </button>
+            <h2 class="recipe-title">Apple Crisp</h2>
+        </div>
+            <span
+                class="rating"
+                role="img"
+                aria-label="Rating: ${recipe.rating} out of 5 stars"
+            >
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                <span aria-hidden="true" class="icon-star-empty">☆</span>
+            </span>
+            <p class="recipe-description">Description</p>
+    </main>
 
 </body>
 <footer>
     <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
     <div class="social">
-        <img src="images/instagram_icon.svg" alt="instagram_icon">
-        <img src="images/pinterest_icon.svg" alt="pinterest_icon">
-        <img src="images/youtube_icon.svg" alt="youtube_icon">
+        <img href="https://www.instagram.com/" src="images/instagram_icon.svg" alt="instagram_icon">
+        <img href="https://www.pinterest.com/" src="images/pinterest_icon.svg" alt="pinterest_icon">
+        <img href="https://www.youtube.com/" src="images/youtube_icon.svg" alt="youtube_icon">
     </div>
 </footer>
 </html>

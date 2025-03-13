@@ -1,14 +1,4 @@
-<span
-	class="rating"
-	role="img"
-	aria-label="Rating: 4 out of 5 stars"
->
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star">⭐</span>
-	<span aria-hidden="true" class="icon-star-empty">⭐</span>
-	<span aria-hidden="true" class="icon-star-empty">☆</span>
-</span>
+
 
 const recipes = [
 	{
@@ -291,3 +281,66 @@ const recipes = [
 		rating: 4
 	}
 ]
+function getRandomRecipe(recipes){
+	const randomIndex = Math.floor(Math.random() * recipes.length);
+	const randomObject = recipes[randomIndex];
+	return randomObject;
+
+}
+
+
+function recipeTemplate(recipe){
+	return  ` <div  id="box">
+    <img src="${recipe.image}" alt="${recipe.name}">
+<button >Desserts</button>
+<h2 class="rating">${recipe.name}</h2>
+ </div>
+ <span
+	class="rating"
+	role="img"
+	aria-label="Rating: ${recipe.rating} out of 5 stars"
+>
+		${ratingTemplate(recipe.rating)}
+	<span aria-hidden="true" class="icon-star">⭐</span>
+	<span aria-hidden="true" class="icon-star">⭐</span>
+	<span aria-hidden="true" class="icon-star">⭐</span>
+	<span aria-hidden="true" class="icon-star-empty">⭐</span>
+	<span aria-hidden="true" class="icon-star-empty">☆</span>
+</span>
+<p>${recipe.description}</p>
+ `
+}
+
+function tagsTemplate(tags){
+	console.log(tags);
+	return tags.map((tag)=>
+	`<button>${tag}</button>`).join(``);		
+}
+
+function ratingTemplate(rating){
+	let html; 
+	for (let i = 1; i <=5; i++){
+		if (i <= rating){
+		`<span aria-hidden="true" class="icon-star">⭐</span>`
+	} else {
+		html =`<span aria-hidden="true" class="icon-star">*</span>`
+	}
+	
+}
+
+	return html;
+}
+
+function renderRecipe(recipeList){
+	let recipeContainer = document.querySelector('.recipe');
+	let html = recipeTemplate(recipeList);
+	recipeContainer.innerHTML += html;
+}
+
+function init(){
+	const recipe = getRandomRecipe(recipes);
+	let recipeContainer = document.querySelector('.recipe')
+	recipeContainer.innerHTML ='';
+	renderRecipe(recipe);
+}
+init();
