@@ -29,11 +29,7 @@
                 <button class="category"> Desserts </button>
                 <img src="images/apple-crisp.jpg" alt="Apple Crisp">
         
-            <span
-                class="rating"
-                role="img"
-                aria-label="Rating: ${recipe.rating} out of 5 stars"
-            >
+            <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
                 <span aria-hidden="true" class="icon-star">⭐</span>
                 <span aria-hidden="true" class="icon-star">⭐</span>
                 <span aria-hidden="true" class="icon-star">⭐</span>
@@ -54,3 +50,22 @@
     </div>
 </footer>
 </html>
+
+<!-- <div  id="recipe-card">
+    <img src="${recipe.image}" alt="${recipe.name}">
+    <button >Desserts</button>
+    <h2 class="rating">${recipe.name}</h2>
+</div>
+ <span
+	class="rating"
+	role="img"
+	aria-label="Rating: ${recipe.rating} out of 5 stars"
+>
+		${ratingTemplate(recipe.rating)}
+	<span aria-hidden="true" class="icon-star">⭐</span>
+	<span aria-hidden="true" class="icon-star">⭐</span>
+	<span aria-hidden="true" class="icon-star">⭐</span>
+	<span aria-hidden="true" class="icon-star-empty">⭐</span>
+	<span aria-hidden="true" class="icon-star-empty">☆</span>
+</span>
+<p>${recipe.description}</p> -->

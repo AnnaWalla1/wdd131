@@ -290,9 +290,9 @@ function getRandomRecipe(recipes){
 
 
 function recipeTemplate(recipe){
-	return  ` <div  id="box">
+	return  ` <div  class="recipe-card">
     <img src="${recipe.image}" alt="${recipe.name}">
-<button >Desserts</button>
+	<button >Desserts</button>
 <h2 class="rating">${recipe.name}</h2>
  </div>
  <span
