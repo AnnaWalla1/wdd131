@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Anna Erickson">
+    <meta name="description" content="Anna Erickson: WDD 131">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anna Erickson: About Me</title>
+    <link href="styles/style.css" rel="stylesheet" media="all">
+    <script src="js/home.js" defer></script>
+</head>
+<body>
+    <nav>
+        <img id="logo" src="images/Screenshot 2025-03-22 at 3.09.45 PM.png" alt="Logo image" loading="lazy">
+        <a href="index.html">Home</a>
+        <a href="pro.html">Experiences</a>
+    </nav>
+
+    <main>
+        <section id="aboutMe">
+            <img id="me" src="images/sweater.jpg" alt="A photo of me" loading="lazy">
+            <h1>About Me</h1>
+            <p id="aboutMep">Anna is an adventurous and creative spirit who loves spending time outdoors, whether it's white water rafting or simply enjoying nature. She has a passion for baking and reading, finding joy in both creating delicious treats and getting lost in a good book. Always up for a good time, Anna embraces life with enthusiasm and a love for new experiences.</p>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <div class="image-row">
+            <img class="expandable" src="images/familyiceland.jpg" alt="My family and I in Iceland" loading="lazy" width="100%" height="auto">
+            <img class="expandable" src="images/ice-JyA.JPG" alt="My brother and I hiking in Iceland" loading="lazy" width="100%" height="auto">
+            <img class="expandable" src="images/kayak.jpg" alt="My dad and I about to Kayak" loading="lazy" width="100%" height="auto">
+        </div>
+
+        <!-- Modal for Image Viewing -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg" alt="Expanded image view">
+            <div id="caption"></div>
+        </div>
+
+        <div class="bottomMe">
+            <img id="seniorImg" src="images/senior.jpg" alt="Senior Image" loading="lazy">
+            <p id="senior">Anna is a passionate computer science major who thrives on learning new things and exploring creative ideas. She loves what she does, finding joy in both problem-solving and innovation. With an enthusiasm for discovery and a zest for life, Anna embraces every opportunity to create, grow, and enjoy the journey. Anna is a coding adventurer, diving headfirst into the world of computer science with curiosity and excitement!</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="index.html">Home</a>
+        <a href="pro.html">Experiences</a>
+    </footer>
+</body>
+</html>
